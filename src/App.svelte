@@ -1,10 +1,21 @@
 <script>
 	export let name;
+
+	import Router from 'svelte-spa-router';
+	import routes from '~/routes';
+	import Header from '~/components/Header.svelte';
 </script>
+
+<Header />
+<Router {routes} />
 
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+
+	<a
+			use:
+	>Login</a>
 </main>
 
 <style>
