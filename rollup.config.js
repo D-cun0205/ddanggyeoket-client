@@ -68,7 +68,21 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser(),
+
+        postcss({
+            extensions: ['.css', '.scss', '.sass'],
+            extract: false,
+            minimize: true,
+            use: [
+                ['sass', {
+                    includePaths: [
+                        './src/theme',
+                        './node_modules'
+                    ]
+                }]
+            ]
+        }),
 	],
 	watch: {
 		clearScreen: false

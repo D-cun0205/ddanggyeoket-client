@@ -11,7 +11,7 @@
 
 <Router>
 	<header>
-		<h1>Route Test</h1>
+		<h1>땅겨켓</h1>
 	</header>
 
 	<nav>
